@@ -36,7 +36,7 @@ public class Main {
             total += holidays.get(i).day;
         }
 
-        return Double.valueOf(total/length);
+        return (double)total/length;
     }
 
     public static void main(String[] args) {
@@ -54,7 +54,9 @@ public class Main {
             System.out.println("Different month!");
         }
 
-        ArrayList<Holiday> holidays = new ArrayList<Holiday>[indDay, chrDay];
+        ArrayList<Holiday> holidays = new ArrayList<Holiday>();
+        holidays.add(indDay);
+        holidays.add(chrDay);
 
         System.out.println("Average Date is " + avgDate(holidays));
     }
