@@ -1,4 +1,4 @@
-public class Room
+public class Room implements Comparable<Room>
 {
     // Variables
     private double width;
@@ -6,21 +6,21 @@ public class Room
     private int floor;
 
     // Getters
-    public Double GetWidth()
+    public Double getWidth()
     {
         return this.width;
     }
-    public Double GetLength()
+    public Double getLength()
     {
         return this.length;
     }
-    public int GetFloor()
+    public int getFloor()
     {
         return this.floor;
     }
 
     // Setters
-    public void SetWidth (double width)
+    public void setWidth(double width)
     {
         if (width > 0)
         {
@@ -28,19 +28,19 @@ public class Room
         }
 
     }
-    public void SetLength (double length)
+    public void setLength(double length)
     {
         if (length > 0)
         {
             this.length = length;
         }
     }
-    public void SetFloor (int floor)
+    public void setFloor(int floor)
     {
         this.floor = floor;
     }
 
-    // Constructor
+    // Constructors
     public Room()
     {
         width = 10;
@@ -50,15 +50,28 @@ public class Room
 
     public Room(Double one, Double two, int floor)
     {
-        SetFloor(floor);
+        setFloor(floor);
 
         if (one >= two)
         {
-            SetLength(one);
-            SetWidth(two);
+            setLength(one);
+            setWidth(two);
         } else{
-            SetLength(two);
-            SetWidth(one);
+            setLength(two);
+            setWidth(one);
         }
+    }
+
+    // Overrides
+    @Override
+    public String toString()
+    {
+        return getLength() + " x " + getWidth() + " on floor " + getFloor();
+    }
+
+    @Override // I'm stuck here
+    public int compareTo(Room o)
+    {
+        return 0;
     }
 }
