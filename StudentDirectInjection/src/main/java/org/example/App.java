@@ -11,5 +11,6 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("DependencyInjectionProject.xml");
         Student obj = (Student)context.getBean("Student");
         obj.Learn();
+
     }
 }

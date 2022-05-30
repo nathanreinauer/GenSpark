@@ -1,6 +1,5 @@
 package org.example;
 
-
 public class Phone
 {
     private String mob;
@@ -11,5 +10,12 @@ public class Phone
 
     public void setMob(String mob) {
         this.mob = mob;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "mob='" + mob + '\'' +
+                '}';
     }
 }
