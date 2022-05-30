@@ -8,4 +8,9 @@ public class Student
     private String name;
     private List<Phone> ph;
     private Address add;
+
+    void Learn()
+    {
+        System.out.println("I love to learn!");
+    }
 }

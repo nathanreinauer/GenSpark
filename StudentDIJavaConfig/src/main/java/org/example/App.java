@@ -11,7 +11,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new AnnotationConfigApplicationContext();
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Student obj = (Student)context.getBean(Student.class);
+
+        obj.Learn();
 
     }
 }
