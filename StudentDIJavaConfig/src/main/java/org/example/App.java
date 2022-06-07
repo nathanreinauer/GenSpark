@@ -16,6 +16,5 @@ public class App
         Student obj = (Student)context.getBean(Student.class);
 
         obj.Learn();
-
     }
 }

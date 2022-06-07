@@ -1,0 +1,20 @@
+label {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  #results{
+    width: 20%;
+    border: 1px solid grey;
+    text-align: center;
+    padding: 20px;
+  }

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    <script src="form.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <h1>REGISTER</h1>
+                <div>
+                    <form action="#">
+                        <label for="fName">First Name</label>
+                        <input type="text" id="fName" placeholder="John">
+
+                        <label for="lName">Last Name</label>
+                        <input type="text" id="lName" placeholder="Doe">
+
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" placeholder="johndoe@example.com">
+
+                        <label for="ctry">Country</label>
+                        <select name="country" id="ctry">
+                            <option value="Canada">Canada</option>
+                            <option value="United States">United States</option>
+                            <option value="Mexico">Mexico</option>
+                        </select>
+
+                        <input type="button" value="Submit" onclick="showtext()">
+                    </form>
+                </div>
+
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
