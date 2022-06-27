@@ -21,12 +21,12 @@
                   </div>
                   <div class="col-6 card-title align-self-center mb-0">
                     <h5>{{movie?.name}}</h5>
-                    <p class="m-0">{{movie?.jobTitle}}</p>
+                    <p class="m-0">{{movie?.studio}}</p>
                   </div>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{movie?.email}}</li>
-                  <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{movie?.phone}}</li>
+                  <li class="list-group-item"><i class="fa fa-film float-right"></i>{{movie?.rating}}</li>
+                  <li class="list-group-item"><i class="fa fa-calendar float-right"></i>Released on {{movie?.releaseDate}}</li>
               </ul>
               <div class="card-body">
                   <div class="float-right btn-group btn-group-sm">
@@ -53,24 +53,24 @@
           <form #editForm="ngForm">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" ngModel="{{editMovie?.name}}" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="emailHelp">
+              <input type="text" ngModel="{{editMovie?.name}}" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Rating">
             </div>
-            <input type="hidden" ngModel="{{editMovie?.id}}" name="id" class="form-control" id="id" placeholder="Email">
-            <input type="hidden" ngModel="{{editMovie?.movieCode}}"name="userCode" class="form-control" id="userCode" placeholder="Email">
+            <input type="hidden" ngModel="{{editMovie?.id}}" name="id" class="form-control" id="id" placeholder="rating">
+            <input type="hidden" ngModel="{{editMovie?.movieCode}}"name="userCode" class="form-control" id="userCode" placeholder="rating">
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" ngModel="{{editMovie?.email}}" name="email" class="form-control" id="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <label for="phone">Job Title</label>
-              <input type="text" ngModel="{{editMovie?.jobTitle}}" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job Title">
+              <label for="rating">MPAA Rating</label>
+              <input type="text" ngModel="{{editMovie?.rating}}" name="rating" class="form-control" id="rating" placeholder="rating">
             </div>
             <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="text" ngModel="{{editMovie?.phone}}" name="phone" class="form-control" id="phone" placeholder="Phone">
+              <label for="studio">Film Studio</label>
+              <input type="text" ngModel="{{editMovie?.studio}}" name="studio" class="form-control" id="studio" placeholder="Job Title">
             </div>
             <div class="form-group">
-              <label for="phone">Image URL</label>
+              <label for="releaseDate">Release Date</label>
+              <input type="text" ngModel="{{editMovie?.releaseDate}}" name="releaseDate" class="form-control" id="releaseDate" placeholder="releaseDate">
+            </div>
+            <div class="form-group">
+              <label for="releaseDate">Image URL</label>
               <input type="text" ngModel="{{editMovie?.imageUrl}}" name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL">
             </div>
             <div class="modal-footer">
@@ -82,7 +82,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Delete Modal -->
   <div class="modal fade" id="deleteMovieModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -121,19 +121,19 @@
               <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" ngModel name="email" class="form-control" id="email" placeholder="Email" required>
+              <label for="rating">MPAA Rating</label>
+              <input type="text" ngModel name="rating" class="form-control" id="rating" placeholder="rating" required>
             </div>
             <div class="form-group">
-              <label for="phone">Job Title</label>
-              <input type="text" ngModel name="jobTitle" class="form-control" id="jobTitle" placeholder="Job Title" required>
+              <label for="studio">Studio</label>
+              <input type="text" ngModel name="studio" class="form-control" id="studio" placeholder="Job Title" required>
             </div>
             <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="text" ngModel name="phone" class="form-control" id="phone" placeholder="Phone" required>
+              <label for="releaseDate">Release Date</label>
+              <input type="text" ngModel name="releaseDate" class="form-control" id="releaseDate" placeholder="releaseDate" required>
             </div>
             <div class="form-group">
-              <label for="phone">Image URL</label>
+              <label for="releaseDate">Image URL</label>
               <input type="text" ngModel name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL" required>
             </div>
             <div class="modal-footer">

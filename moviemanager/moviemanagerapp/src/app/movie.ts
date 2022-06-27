@@ -1,9 +1,9 @@
 export interface Movie {
     id: number;
     name: string;
-    email: string;
-    jobTitle: string;
-    phone: string;
+    rating: string;
+    studio: string;
+    releaseDate: string;
     imageUrl: string;
     movieCode: string;
 }

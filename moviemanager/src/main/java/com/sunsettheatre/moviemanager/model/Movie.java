@@ -10,21 +10,21 @@ public class Movie implements Serializable {
     @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
-    private String email;
-    private String jobTitle;
-    private String phone;
+    private String rating;
+    private String studio;
+    private String releaseDate;
     private String imageUrl;
     @Column(nullable = false, updatable = false)
     private String movieCode;
 
     public Movie() {}
 
-    public Movie(Long id, String name, String email, String jobTitle, String phone, String imageUrl, String movieCode) {
+    public Movie(Long id, String name, String rating, String studio, String releaseDate, String imageUrl, String movieCode) {
         this.id = id;
         this.name = name;
-        this.email = email;
-        this.jobTitle = jobTitle;
-        this.phone = phone;
+        this.rating = rating;
+        this.studio = studio;
+        this.releaseDate = releaseDate;
         this.imageUrl = imageUrl;
         this.movieCode = movieCode;
     }
@@ -45,28 +45,28 @@ public class Movie implements Serializable {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getrating() {
+        return rating;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setrating(String rating) {
+        this.rating = rating;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
+    public String getstudio() {
+        return studio;
     }
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
+    public void setstudio(String studio) {
+        this.studio = studio;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getreleaseDate() {
+        return releaseDate;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setreleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public String getImageUrl() {
@@ -90,9 +90,9 @@ public class Movie implements Serializable {
         return "Movie{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", jobTitle='" + jobTitle + '\'' +
-                ", phone='" + phone + '\'' +
+                ", rating='" + rating + '\'' +
+                ", studio='" + studio + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", movieCode='" + movieCode + '\'' +
                 '}';
